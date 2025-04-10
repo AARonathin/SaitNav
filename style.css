@@ -1,0 +1,133 @@
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url(BackgroundSaitNva.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    display: flex;
+    width: 1200px;
+    height: 800px;
+    max-width: 100vw; /* Scale with screen */
+    max-height: 100vh; /* Scale with screen */
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    flex-direction: row;
+}
+.toggle-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #04232f;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+.sidebar {
+    width: 250px;
+    height: 100%;
+    padding: 20px;
+    background: #04232f;
+    color: white;
+    flex-shrink: 0;
+    transition: width 0.3s ease;
+    overflow: hidden; /* Ensures content doesn't overflow when collapsed */
+}
+.sidebar h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #99e4ff; /* Optional: Accent color to match the button */
+    text-align: center; /* Optional: Center-align */
+    border-bottom: 1px solid #555; /* Optional: Divider under header */
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.sidebar.collapsed {
+    width: 0;
+    padding: 0; /* Removes padding when collapsed */
+    overflow: hidden;
+}
+
+#toggleSidebar {
+    position: absolute;
+    /* Other styling */
+}
+
+.sidebar label, .sidebar select, .sidebar button {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+
+.sidebar select, .sidebar button {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+}
+
+.sidebar button {
+    background: #99e4ff;
+    color: #04232f;
+    cursor: pointer;
+}
+
+.sidebar button:hover {
+    background: #00aeef;
+}
+
+.map-wrapper {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.map-container {
+    position: relative;
+    width: 1077px;
+    height: 1076px;
+    overflow: hidden;
+  }
+  
+  #floorplan {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  
+  #graph {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1077px;
+    height: 1076px;
+    pointer-events: none;
+  }
+  
+
+
+
+/* Keep canvas fully covering the image */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+
