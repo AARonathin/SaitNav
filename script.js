@@ -180,12 +180,12 @@ document.addEventListener("DOMContentLoaded", () => {
                     { id: "I7", label: "Intersection 7", type: "intersection", pos: { x: 310, y: 293 } },
                     { id: "I8", label: "Intersection 8", type: "intersection", pos: { x: 369, y: 293 } },
                     { id: "I9", label: "Intersection 9", type: "intersection", pos: { x: 404, y: 293 } },
-                    { id: "I10", label: "Intersection 10", type: "intersection", pos: { x: 100, y: 293 } },
-                    { id: "I11", label: "Intersection 11", type: "intersection", pos: { x: 100, y: 293 } },
-                    { id: "I12", label: "Intersection 12", type: "intersection", pos: { x: 100, y: 293 } },
-                    { id: "I13", label: "Intersection 13", type: "intersection", pos: { x: 100, y: 293 } },
-                    { id: "I14", label: "Intersection 14", type: "intersection", pos: { x: 100, y: 293 } },
-                    { id: "I15", label: "Intersection 15", type: "intersection", pos: { x: 100, y: 293 } },
+                    { id: "I10", label: "Intersection 10", type: "intersection", pos: { x: 404, y: 328 } },
+                    { id: "I11", label: "Intersection 11", type: "intersection", pos: { x: 404, y: 360 } },
+                    { id: "I12", label: "Intersection 12", type: "intersection", pos: { x: 404, y: 379 } },
+                    { id: "I13", label: "Intersection 13", type: "intersection", pos: { x: 404, y: 396 } },
+                    { id: "I14", label: "Intersection 14", type: "intersection", pos: { x: 404, y: 194 } },
+                    { id: "I15", label: "Intersection 15", type: "intersection", pos: { x: 363, y: 194 } },
                     { id: "I16", label: "Intersection 16", type: "intersection", pos: { x: 100, y: 293 } },
                     { id: "I17", label: "Intersection 17", type: "intersection", pos: { x: 100, y: 293 } },
                     { id: "I18", label: "Intersection 18", type: "intersection", pos: { x: 100, y: 293 } },
@@ -195,7 +195,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 ],
                 edges: [
                     { source: "E1", target: "I1" },
-                    { source: "E2", target: "I1" },
                     { source: "I1", target: "I2" },
                     { source: "I2", target: "I3" },
                     { source: "I3", target: "I4" },
@@ -220,7 +219,18 @@ document.addEventListener("DOMContentLoaded", () => {
                     { source: "I21", target: "R110" },
                     { source: "R110", target: "R111" },
                     { source: "R111", target: "R112" },
-                    
+                    { source: "I9", target: "I10" },
+                    { source: "I10", target: "R117" },
+                    { source: "I10", target: "I11" },
+                    { source: "I11", target: "R118" },
+                    { source: "I11", target: "I12" },
+                    { source: "I12", target: "R119" },
+                    { source: "I12", target: "I13" },
+                    { source: "I13", target: "E2" },
+                    { source: "E2", target: "I13" },
+                    { source: "E3", target: "I15" },
+                    { source: "I15", target: "I14" },
+                    { source: "I14", target: "I9" },
                 ]
             },
             "floor2": {
@@ -241,7 +251,7 @@ document.addEventListener("DOMContentLoaded", () => {
             {
               selector: 'node',
               style: {
-                'background-color': '#99e4ff',
+                'background-color': '#ffffff',
                 'label': '', // No label displayed
                 'font-size': '10px',
                 'shape': 'ellipse',
@@ -259,7 +269,7 @@ document.addEventListener("DOMContentLoaded", () => {
               selector: 'edge',
               style: {
                 'width': 2,
-                'line-color': '#99e4ff'
+                'line-color': '#ffffff'
               }
             },
             {
@@ -414,9 +424,9 @@ document.addEventListener("DOMContentLoaded", () => {
         if (pathToTarget.length > 0) {
             pathToTarget.removeClass('hidden');
             pathToTarget.style({
-                "line-color": "#99e4ff",
+                "line-color": "#ffffff",
                 "width": 3,
-                "background-color": "99e4ff"
+                "background-color": "ffffff"
             });
     
             console.log("✅ Highlighted Path:", pathToTarget.map(el => el.id()));
