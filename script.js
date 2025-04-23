@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const scaleMultiplier = e.deltaY < 0 ? zoomFactor : 1 / zoomFactor;
     
         const newScale = scale * scaleMultiplier;
-        if (newScale >= minScale && newScale <= 3) { // Adjust '3' to your maximum desired zoom level
+        if (newScale >= minScale && newScale <= 3) { 
             scale = newScale;
             applyTransform();
         }
@@ -99,7 +99,19 @@ document.addEventListener("DOMContentLoaded", () => {
             "floor1": "Stan_Grad/SaitNavSG1stFloor.png",
             "floor2": "Stan_Grad/SaitNavSG2ndFloor.png",
             "floor3": "Stan_Grad/SaitNavSG3rdFloor.png",
-            "floorB": "Stan_Grad/SaitNavSGbasement.png"
+            "Basement": "Stan_Grad/SaitNavSGBasement.png"
+        },
+        "building2": {
+            "floor1": "Senator_Burns/Senator_Burns_Floor_1.png",
+            "floor2": "Senator_Burns/Senator_Burns_Floor_2.png",
+            "floor3": "Senator_Burns/Senator_Burns_Floor_3.png",
+            "floor5": "Senator_Burns/Senator_Burns_Floor_5.png",
+            "floor6": "Senator_Burns/Senator_Burns_Floor_6.png",
+            "floor7": "Senator_Burns/Senator_Burns_Floor_7.png",
+            "floor8": "Senator_Burns/Senator_Burns_Floor_8.png",
+            "floor9": "Senator_Burns/Senator_Burns_Floor_9.png",
+            "floor10": "Senator_Burns/Senator_Burns_Floor_10.png",
+            "floor11": "Senator_Burns/Senator_Burns_Floor_11.png",
         }
     };
 
