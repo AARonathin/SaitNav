@@ -96,10 +96,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const buildingImages = {
         "building1": {
-            "floor1": "Stan_Grad/SaitNavSG1stFloor.png",
-            "floor2": "Stan_Grad/SaitNavSG2ndFloor.png",
-            "floor3": "Stan_Grad/SaitNavSG3rdFloor.png",
-            "Basement": "Stan_Grad/SaitNavSGBasement.png"
+            "floor1": "Stan_Grad/stangradfloor1.png",
+            "floor2": "Stan_Grad/stangradfloor2.png",
+            "floor3": "Stan_Grad/stangradfloor3.png",
+            "Basement": "Stan_Grad/stangradbasement.png"
         },
         "building2": {
             "floor1": "Senator_Burns/Senator_Burns_Floor_1.png",
